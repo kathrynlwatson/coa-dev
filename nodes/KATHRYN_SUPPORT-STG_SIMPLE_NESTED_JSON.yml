@@ -1,0 +1,51 @@
+steps:
+  STG_SIMPLE_NESTED_JSON-91ec51ad-432d-4575-b7d0-958f084303ed:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationName: KATHRYN_SUPPORT
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 59b732f0-cb40-49cf-b9bb-746452f7b1b3
+              stepCounter: 91ec51ad-432d-4575-b7d0-958f084303ed
+            dataType: VARIANT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: V
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 62e10483-b166-448c-b59b-37a1d1d0b1f0
+                    stepCounter: 499a7a93-169b-4fd7-8368-dc2f24457e1d
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: KATHRYN_SUPPORT
+                nodeName: SIMPLE_NESTED_JSON
+            join:
+              joinCondition: FROM {{ ref('KATHRYN_SUPPORT', 'SIMPLE_NESTED_JSON') }} "SIMPLE_NESTED_JSON"
+            name: STG_SIMPLE_NESTED_JSON
+            noLinkRefs: []
+      name: STG_SIMPLE_NESTED_JSON
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 91ec51ad-432d-4575-b7d0-958f084303ed

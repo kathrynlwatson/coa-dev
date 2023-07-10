@@ -1,0 +1,34 @@
+steps:
+  SIMPLE_NESTED_JSON2-a5b7edd3-12d0-489b-aadc-f091d8ebb98b:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: KATHRYN_SUPPORT
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 8c0cb11f-d786-4a9b-bc8e-98176e517432
+              stepCounter: a5b7edd3-12d0-489b-aadc-f091d8ebb98b
+            config: {}
+            dataType: VARIANT
+            defaultValue: ""
+            description: ""
+            name: V
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('KATHRYN_SUPPORT', 'SIMPLE_NESTED_JSON2') }}
+      name: SIMPLE_NESTED_JSON2
+      schema: ""
+      sqlType: Source
+      table: SIMPLE_NESTED_JSON2
+      type: sourceInput
+    stepCounter: a5b7edd3-12d0-489b-aadc-f091d8ebb98b
