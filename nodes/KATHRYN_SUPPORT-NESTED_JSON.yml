@@ -1,5 +1,5 @@
 steps:
-  SIMPLE_NESTED_JSON3-af68396e-7543-4253-8d63-d70822ee51a4:
+  NESTED_JSON-03ddf417-c874-44e4-9633-41a98e039546:
     operation:
       database: ""
       dataset: ""
@@ -14,8 +14,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 9f4dce48-4166-4a37-a0bd-d9129d5b0c49
-              stepCounter: af68396e-7543-4253-8d63-d70822ee51a4
+              columnCounter: 5e0eb662-31bd-4db0-832c-4df0c90ae665
+              stepCounter: 03ddf417-c874-44e4-9633-41a98e039546
             config: {}
             dataType: VARIANT
             defaultValue: ""
@@ -25,10 +25,10 @@ steps:
             primaryKey: false
             uniqueKey: false
         join:
-          joinCondition: FROM {{ ref('KATHRYN_SUPPORT', 'SIMPLE_NESTED_JSON3') }}
-      name: SIMPLE_NESTED_JSON3
+          joinCondition: FROM {{ ref('KATHRYN_SUPPORT', 'NESTED_JSON') }}
+      name: NESTED_JSON
       schema: ""
       sqlType: Source
-      table: SIMPLE_NESTED_JSON3
+      table: NESTED_JSON
       type: sourceInput
-    stepCounter: af68396e-7543-4253-8d63-d70822ee51a4
+    stepCounter: 03ddf417-c874-44e4-9633-41a98e039546

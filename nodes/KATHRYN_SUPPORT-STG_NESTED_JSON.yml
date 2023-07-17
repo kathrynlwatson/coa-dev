@@ -1,0 +1,208 @@
+steps:
+  STG_NESTED_JSON-7121eebb-9da9-4b6b-8210-ad950d6f1bd3:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationName: KATHRYN_SUPPORT
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: ff4c5775-e96e-4cd8-b94d-ca45eb16f6ad
+              stepCounter: 7121eebb-9da9-4b6b-8210-ad950d6f1bd3
+            dataType: VARIANT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: V
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5e0eb662-31bd-4db0-832c-4df0c90ae665
+                    stepCounter: 03ddf417-c874-44e4-9633-41a98e039546
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 31be5518-5967-47e0-b4e5-10cc47252818
+              stepCounter: 7121eebb-9da9-4b6b-8210-ad950d6f1bd3
+            config: {}
+            dataType: STRING
+            description: ""
+            name: quiz_maths_q1_answer
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5e0eb662-31bd-4db0-832c-4df0c90ae665
+                    stepCounter: 03ddf417-c874-44e4-9633-41a98e039546
+                transform: "\"NESTED_JSON\".\"V\":\"quiz\".\"maths\".\"q1\".\"answer\"::STRING"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4c8832a3-1749-44be-9545-1bde7e987964
+              stepCounter: 7121eebb-9da9-4b6b-8210-ad950d6f1bd3
+            config: {}
+            dataType: STRING
+            description: ""
+            name: quiz_maths_q1_options
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5e0eb662-31bd-4db0-832c-4df0c90ae665
+                    stepCounter: 03ddf417-c874-44e4-9633-41a98e039546
+                transform: "\"V_quiz_maths_q1_options\".value::STRING"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 21034401-1a41-4ffc-a6bd-29abe51fadd3
+              stepCounter: 7121eebb-9da9-4b6b-8210-ad950d6f1bd3
+            config: {}
+            dataType: STRING
+            description: ""
+            name: quiz_maths_q1_question
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5e0eb662-31bd-4db0-832c-4df0c90ae665
+                    stepCounter: 03ddf417-c874-44e4-9633-41a98e039546
+                transform: "\"NESTED_JSON\".\"V\":\"quiz\".\"maths\".\"q1\".\"question\"::STRING"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2d23ccb0-768b-4e96-997d-b980d821db64
+              stepCounter: 7121eebb-9da9-4b6b-8210-ad950d6f1bd3
+            config: {}
+            dataType: STRING
+            description: ""
+            name: quiz_maths_q2_answer
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5e0eb662-31bd-4db0-832c-4df0c90ae665
+                    stepCounter: 03ddf417-c874-44e4-9633-41a98e039546
+                transform: "\"NESTED_JSON\".\"V\":\"quiz\".\"maths\".\"q2\".\"answer\"::STRING"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1cb5c21c-ee89-4fb4-9d95-91588ba04020
+              stepCounter: 7121eebb-9da9-4b6b-8210-ad950d6f1bd3
+            config: {}
+            dataType: STRING
+            description: ""
+            name: quiz_maths_q2_options
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5e0eb662-31bd-4db0-832c-4df0c90ae665
+                    stepCounter: 03ddf417-c874-44e4-9633-41a98e039546
+                transform: "\"V_quiz_maths_q2_options\".value::STRING"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: ddfc0ec7-9ea7-489b-93ca-7da42831f3f9
+              stepCounter: 7121eebb-9da9-4b6b-8210-ad950d6f1bd3
+            config: {}
+            dataType: STRING
+            description: ""
+            name: quiz_maths_q2_question
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5e0eb662-31bd-4db0-832c-4df0c90ae665
+                    stepCounter: 03ddf417-c874-44e4-9633-41a98e039546
+                transform: "\"NESTED_JSON\".\"V\":\"quiz\".\"maths\".\"q2\".\"question\"::STRING"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 50ec64ab-5b30-484e-917a-213cb2fb9d72
+              stepCounter: 7121eebb-9da9-4b6b-8210-ad950d6f1bd3
+            config: {}
+            dataType: STRING
+            description: ""
+            name: quiz_sport_q1_answer
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5e0eb662-31bd-4db0-832c-4df0c90ae665
+                    stepCounter: 03ddf417-c874-44e4-9633-41a98e039546
+                transform: "\"NESTED_JSON\".\"V\":\"quiz\".\"sport\".\"q1\".\"answer\"::STRING"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e530d04d-ed51-49a0-ba33-aa346b136237
+              stepCounter: 7121eebb-9da9-4b6b-8210-ad950d6f1bd3
+            config: {}
+            dataType: STRING
+            description: ""
+            name: quiz_sport_q1_options
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5e0eb662-31bd-4db0-832c-4df0c90ae665
+                    stepCounter: 03ddf417-c874-44e4-9633-41a98e039546
+                transform: "\"V_quiz_sport_q1_options\".value::STRING"
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 2ff4296d-fb6f-4894-96ed-d92cef400cc6
+              stepCounter: 7121eebb-9da9-4b6b-8210-ad950d6f1bd3
+            config: {}
+            dataType: STRING
+            description: ""
+            name: quiz_sport_q1_question
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 5e0eb662-31bd-4db0-832c-4df0c90ae665
+                    stepCounter: 03ddf417-c874-44e4-9633-41a98e039546
+                transform: "\"NESTED_JSON\".\"V\":\"quiz\".\"sport\".\"q1\".\"question\"::STRING"
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: KATHRYN_SUPPORT
+                nodeName: NESTED_JSON
+            join:
+              joinCondition: |-
+                FROM {{ ref('KATHRYN_SUPPORT', 'NESTED_JSON') }} "NESTED_JSON", 
+                lateral flatten(input => "V":"quiz"."maths"."q1"."options", OUTER => TRUE) "V_quiz_maths_q1_options", 
+                lateral flatten(input => "V":"quiz"."maths"."q2"."options", OUTER => TRUE) "V_quiz_maths_q2_options", 
+                lateral flatten(input => "V":"quiz"."sport"."q1"."options", OUTER => TRUE) "V_quiz_sport_q1_options"
+            name: STG_NESTED_JSON
+            noLinkRefs: []
+      name: STG_NESTED_JSON
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: 7121eebb-9da9-4b6b-8210-ad950d6f1bd3
