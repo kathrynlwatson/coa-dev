@@ -1,0 +1,213 @@
+steps:
+  DIM_EXISTING_TABLE_TO_BRING_IN-a31db357-cfeb-496c-b12d-cde90b0fbea0:
+    operation:
+      config:
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+      database: ""
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationName: SAMPLE_OBJECTS
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f4fad6eb-a068-4948-bd74-a35c21edd88d
+              stepCounter: a31db357-cfeb-496c-b12d-cde90b0fbea0
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSurrogateKey: true
+            name: DIM_DIM_EXISTING_TABLE_TO_BRING_IN_KEY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - columnReference:
+              columnCounter: 927e8e22-5284-473a-bb69-24986c774921
+              stepCounter: a31db357-cfeb-496c-b12d-cde90b0fbea0
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: "\"SOURCE_WANT_TO_USE_FOR_EXISTING_TABLE\".\"FIRST_NAME\"||' '||\"SOURCE_WANT_TO_USE_FOR_EXISTING_TABLE\".\"LAST_NAME\""
+          - columnReference:
+              columnCounter: c69cd731-0945-4f57-9cc1-9a6734c7aff9
+              stepCounter: a31db357-cfeb-496c-b12d-cde90b0fbea0
+            dataType: DATE
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: BIRTHDAY
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 4f2e28e3-a46c-46c8-802b-a3706b1e52ad
+                    stepCounter: 6bb5799d-5ab1-4ea9-81a1-adae144a56c6
+                transform: ""
+          - columnReference:
+              columnCounter: aa3932ff-a6c2-4162-b734-19cfc5bce4ce
+              stepCounter: a31db357-cfeb-496c-b12d-cde90b0fbea0
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: AGE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: DATEDIFF('days', "SOURCE_WANT_TO_USE_FOR_EXISTING_TABLE"."BIRTHDAY",current_date())
+          - columnReference:
+              columnCounter: 83435ade-c0af-42c9-8c69-5debf2d7aa22
+              stepCounter: a31db357-cfeb-496c-b12d-cde90b0fbea0
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: EMAIL_PROVIDER
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CASE WHEN "SOURCE_WANT_TO_USE_FOR_EXISTING_TABLE"."EMAIL_ADDRESS" ILIKE '%gmail%' THEN 'Gmail' ELSE 'Other' END
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: f28b5d83-f25b-4370-84ac-d66275b25ebd
+              stepCounter: a31db357-cfeb-496c-b12d-cde90b0fbea0
+            config: {}
+            dataType: NUMBER
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemVersion: true
+            name: SYSTEM_VERSION
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 7b7b8d14-5516-4e7e-b9f9-78df21f7537e
+              stepCounter: a31db357-cfeb-496c-b12d-cde90b0fbea0
+            config: {}
+            dataType: VARCHAR
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemCurrentFlag: true
+            name: SYSTEM_CURRENT_FLAG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: ""
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 6fdd19e6-4ad2-4c29-be99-800eb237aea5
+              stepCounter: a31db357-cfeb-496c-b12d-cde90b0fbea0
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemStartDate: true
+            name: SYSTEM_START_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: fd7439db-c8d7-4b2c-ba3c-4d44d84b7157
+              stepCounter: a31db357-cfeb-496c-b12d-cde90b0fbea0
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemEndDate: true
+            name: SYSTEM_END_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 23a6983f-2ab6-4c8a-bace-81a62b49ca12
+              stepCounter: a31db357-cfeb-496c-b12d-cde90b0fbea0
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemCreateDate: true
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 62d6e477-ef34-4b98-861a-28ab6009664a
+              stepCounter: a31db357-cfeb-496c-b12d-cde90b0fbea0
+            config: {}
+            dataType: TIMESTAMP
+            defaultValue: ""
+            description: ""
+            hashColumns: []
+            isSystemUpdateDate: true
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences: []
+                transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - aliases:
+              SOURCE_WANT_TO_USE_FOR_EXISTING_TABLE: 6bb5799d-5ab1-4ea9-81a1-adae144a56c6
+            customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SAMPLE_OBJECTS
+                nodeName: SOURCE_WANT_TO_USE_FOR_EXISTING_TABLE
+            join:
+              joinCondition: "FROM {{ ref('SAMPLE_OBJECTS', 'SOURCE_WANT_TO_USE_FOR_EXISTING_TABLE') }} \"SOURCE_WANT_TO_USE_FOR_EXISTING_TABLE\"   "
+            name: DIM_EXISTING_TABLE_TO_BRING_IN
+            noLinkRefs: []
+      name: DIM_EXISTING_TABLE_TO_BRING_IN
+      overrideSQL: false
+      schema: ""
+      sqlType: "3"
+      type: sql
+    stepCounter: a31db357-cfeb-496c-b12d-cde90b0fbea0

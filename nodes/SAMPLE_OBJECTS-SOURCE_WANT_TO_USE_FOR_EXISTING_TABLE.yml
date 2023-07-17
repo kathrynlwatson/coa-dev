@@ -1,0 +1,79 @@
+steps:
+  SOURCE_WANT_TO_USE_FOR_EXISTING_TABLE-6bb5799d-5ab1-4ea9-81a1-adae144a56c6:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      description: ""
+      locationID: ""
+      locationName: SAMPLE_OBJECTS
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 767ef0f7-d9e5-4c00-babe-7963e824d82b
+              stepCounter: 6bb5799d-5ab1-4ea9-81a1-adae144a56c6
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: FIRST_NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: e81d56fb-e214-420c-8cc5-2c6178704fe7
+              stepCounter: 6bb5799d-5ab1-4ea9-81a1-adae144a56c6
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: LAST_NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 4f2e28e3-a46c-46c8-802b-a3706b1e52ad
+              stepCounter: 6bb5799d-5ab1-4ea9-81a1-adae144a56c6
+            config: {}
+            dataType: DATE
+            defaultValue: ""
+            description: ""
+            name: BIRTHDAY
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 71db02e2-f060-4696-9e15-d772715bc4b4
+              stepCounter: 6bb5799d-5ab1-4ea9-81a1-adae144a56c6
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: EMAIL_ADDRESS
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SAMPLE_OBJECTS', 'SOURCE_WANT_TO_USE_FOR_EXISTING_TABLE') }}
+      name: SOURCE_WANT_TO_USE_FOR_EXISTING_TABLE
+      schema: ""
+      sqlType: Source
+      table: SOURCE_WANT_TO_USE_FOR_EXISTING_TABLE
+      type: sourceInput
+    stepCounter: 6bb5799d-5ab1-4ea9-81a1-adae144a56c6
