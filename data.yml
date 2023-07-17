@@ -2,9 +2,15 @@ defaultStorageMapping: WORK
 jobs: {}
 locations:
   SAMPLE:
-    mappingDefinitions: {}
+    mappingDefinitions:
+      "5":
+        database: COALESCE_SAMPLE_DATABASE
+        schema: TPCH_SF001
   WORK:
-    mappingDefinitions: {}
+    mappingDefinitions:
+      "5":
+        database: KATHRYN_SUPPORT
+        schema: PUBLIC
 macros: {}
 packages: {}
 projects: {}
